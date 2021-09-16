@@ -1,0 +1,48 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(231, 231, 231);
+}
+.container {
+	width: 90vw;
+	display: flex;
+	align-items: center;
+}
+.panel {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 80vh;
+	flex: 0.5;
+	border-radius: 40px;
+	margin: 10px;
+	position: relative;
+	transition: all 400ms ease-in;
+	cursor: pointer;
+	box-shadow: 0 0px 17px black;
+}
+#titul {
+	opacity: 0;
+	font-size: 25px;
+	position: absolute;
+	bottom: 10px;
+	left: 20px;
+	color: white;
+}
+
+.panel.active {
+	flex: 5;
+	height: 90vh;
+}
+.panel.active:hover {
+	box-shadow: 0 0px 25px rgb(55, 90, 187);
+}
+.panel.active #titul {
+	opacity: 1;
+}
